@@ -36,7 +36,7 @@ def times(event):
     op = 'times'
     global num
     global dig
-    num = int(dig)
+    num = float(dig)
     dig = ''
     label["text"] = ''
     
@@ -46,7 +46,7 @@ def divide(event):
     op = 'divide'
     global num
     global dig
-    num = int(dig)
+    num = float(dig)
     dig = ''
     label["text"] = ''
     
@@ -56,7 +56,7 @@ def percentage(event):
     op = 'percentage'
     global num
     global dig
-    num = int(dig)
+    num = float(dig)
     dig = '100'
     label["text"] = ''
 
@@ -65,7 +65,7 @@ def equal(event):
     global op
     global num
     global dig
-    num1 = int(dig)
+    num1 = float(dig)
     dig = ''
     if op == 'plus':
         label["text"] = num + num1
@@ -99,7 +99,7 @@ button7 = Button(width=5, height=2, text = '7', font=("Arial", 22, "bold"), comm
 button8 = Button(width=5, height=2, text = '8', font=("Arial", 22, "bold"), command=lambda x=8: digit(x))
 button9 = Button(width=5, height=2, text = '9', font=("Arial", 22, "bold"), command=lambda x=9: digit(x))
 button0 = Button(width=5, height=2, text = '0', font=("Arial", 22, "bold"), command=lambda x=0: digit(x))
-button_comma = Button(width=5, height=2, text = ',', font=("Arial", 22, "bold"))# пока не работает
+button_comma = Button(width=5, height=2, text = ',', font=("Arial", 22, "bold"), command=lambda x='.': digit(x))
 buttonC = Button(width=5, height=2, text = 'C', font=("Arial", 22, "bold"), bg='#ff0000')
 button_equal = Button(width=5, height=2, text = '=', font=("Arial", 22, "bold"))
 button_plus = Button(width=5, height=2, text = '+', font=("Arial", 22, "bold"))
