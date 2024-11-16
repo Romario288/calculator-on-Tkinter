@@ -9,6 +9,8 @@ def C(event):
     global dig
     dig = ''
     label["text"] = ''
+
+
 def plus(event):
      global op
      op = 'plus'
@@ -27,6 +29,7 @@ def minus(event):
     num = float(dig)
     dig = ''
     label["text"] = ''
+    
 
 def times(event):
     global op
@@ -36,6 +39,7 @@ def times(event):
     num = int(dig)
     dig = ''
     label["text"] = ''
+    
 
 def divide(event):
     global op
@@ -45,6 +49,7 @@ def divide(event):
     num = int(dig)
     dig = ''
     label["text"] = ''
+    
 
 def percentage(event):
     global op
@@ -54,6 +59,8 @@ def percentage(event):
     num = int(dig)
     dig = '100'
     label["text"] = ''
+
+
 def equal(event):
     global op
     global num
@@ -76,6 +83,7 @@ def digit(d):
     global dig
     dig += str(d)
     label["text"] = dig
+    
 
 root = Tk()
 root.geometry('500x600')
